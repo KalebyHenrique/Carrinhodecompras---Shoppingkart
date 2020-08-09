@@ -24,6 +24,7 @@ const addNewItem = (item, qtd) => {
     li.appendChild(link);
     ul.prepend(li);
   } else {
+    --produtoQtd;
     alert("Esse item já foi adicionado");
   }
 };
@@ -59,7 +60,6 @@ const removeLi = (li) => {
   items.findIndex((item, index) => {
     if (li.includes(item)) {
       items.splice(index, 1);
-      console.log(index);
     }
   });
   if (items.length === 0) {
