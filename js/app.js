@@ -30,7 +30,7 @@ const addNewItem = (item, qtd) => {
 };
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const newItem = e.target.produto.value.trim();
+  const newItem = e.target.produto.value.toLowerCase().trim();
   let qtd = e.target.qtd.value;
   if (isNaN(newItem)) {
     if (newItem.length > 0) {
